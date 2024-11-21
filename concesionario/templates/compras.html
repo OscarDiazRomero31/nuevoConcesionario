@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compras</title>
+</head>
+<body>
+    <h1>Lista de Compras</h1>
+    <ul>
+        {% for compra in compras %}
+            <li>
+                <a href="{% url 'compra_detail' compra.pk %}">
+                    {{ compra.cliente.nombre_completo }} - {{ compra.vehiculo.modelo }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Volver al inicio</a>
+</body>
+</html>

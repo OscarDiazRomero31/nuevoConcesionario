@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fabricantes</title>
+</head>
+<body>
+    <h1>Lista de Fabricantes</h1>
+    <ul>
+        {% for fabricante in fabricantes %}
+            <li>
+                <a href="{% url 'fabricante_detail' fabricante.pk %}">{{ fabricante.nombre }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Volver al inicio</a>
+</body>
+</html>

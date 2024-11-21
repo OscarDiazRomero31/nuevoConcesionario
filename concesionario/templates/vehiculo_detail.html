@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle de Vehículo</title>
+</head>
+<body>
+    <h1>Detalle del Vehículo</h1>
+    <p><strong>Modelo:</strong> {{ object.modelo }}</p>
+    <p><strong>Fabricante:</strong> {{ object.fabricante.nombre }}</p>
+    <p><strong>Año de Fabricación:</strong> {{ object.ano_fabricacion }}</p>
+    <p><strong>Precio:</strong> ${{ object.precio }}</p>
+    <p><strong>Disponible:</strong> {{ object.disponible }}</p>
+    <a href="{% url 'vehiculos' %}">Volver a la lista de vehículos</a>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle de Cliente</title>
+</head>
+<body>
+    <h1>Detalle del Cliente</h1>
+    <p><strong>Nombre:</strong> {{ object.nombre_completo }}</p>
+    <p><strong>Email:</strong> {{ object.email }}</p>
+    <p><strong>Fecha de Registro:</strong> {{ object.fecha_registro }}</p>
+    <p><strong>Es VIP:</strong> {{ object.es_vip }}</p>
+    <a href="{% url 'clientes' %}">Volver a la lista de clientes</a>
+</body>
+</html>
