@@ -1,24 +1,21 @@
 from django.urls import path
 from . import views
-from django.conf.urls import handler404, handler500, handler403, handler400
 
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),  # Página de índice
-    path('clientes/', views.ClienteListView.as_view(), name='clientes'),  # Lista de clientes
-    path('cliente/<int:pk>/', views.ClienteDetailView.as_view(), name='cliente_detail'),  # Detalle de cliente
-    path('fabricantes/', views.FabricanteListView.as_view(), name='fabricantes'),  # Lista de fabricantes
-    path('fabricante/<int:pk>/', views.FabricanteDetailView.as_view(), name='fabricante_detail'),  # Detalle de fabricante
-    path('vehiculos/', views.VehiculoListView.as_view(), name='vehiculos'),  # Lista de vehículos
-    path('vehiculo/<int:pk>/', views.VehiculoDetailView.as_view(), name='vehiculo_detail'),  # Detalle de vehículo
-    path('compras/', views.CompraListView.as_view(), name='compras'),  # Lista de compras
-    path('compra/<int:pk>/', views.CompraDetailView.as_view(), name='compra_detail'),  # Detalle de compra
-    path('error_demo/', views.error_demo, name='error_demo'),  # Demo de errores
+    path('', views.index, name='index'),
+    path('clientes/', views.lista_clientes, name='lista_clientes'),
+    path('clientes/<int:id>/', views.detalle_cliente, name='detalle_cliente'),
+    path('fabricantes/', views.lista_fabricantes, name='lista_fabricantes'),
+    path('vehiculos/', views.lista_vehiculos, name='lista_vehiculos'),
+    path('vehiculos/<int:id>/', views.detalle_vehiculo, name='detalle_vehiculo'),
+    path('compras/', views.lista_compras, name='lista_compras'),
+    path('compras/<int:id>/', views.detalle_compra, name='detalle_compra'),
+    path('empleados/', views.lista_empleados, name='lista_empleados'),
+    path('concesionarios/', views.lista_concesionarios, name='lista_concesionarios'),
+    path('accesorios/', views.lista_accesorios, name='lista_accesorios'),
 ]
 
-# Configuración de handlers de error personalizados
-handler404 = 'myapp.views.error_404_view'
-handler500 = 'myapp.views.error_500_view'
-handler403 = 'myapp.views.error_403_view'
-handler400 = 'myapp.views.error_400_view'
-
-
+handler400 = 'concesionario.views.error_400_view'
+handler403 = 'concesionario.views.error_403_view'
+handler404 = 'concesionario.views.error_404_view'
+handler500 = 'concesionario.views.error_500_view'

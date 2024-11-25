@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Cliente</title>
+</head>
+<body>
+    <h1>Detalle de {{ cliente.nombre_completo }}</h1>
+    <p>Email: {{ cliente.email }}</p>
+    <p>Fecha de Registro: {{ cliente.fecha_registro }}</p>
+    <p>VIP: {{ cliente.es_vip }}</p>
+    {% if perfil %}
+        <h2>Perfil del Cliente</h2>
+        <p>Fecha de Nacimiento: {{ perfil.fecha_nacimiento }}</p>
+        <p>Dirección: {{ perfil.direccion }}</p>
+        <p>Teléfono: {{ perfil.telefono }}</p>
+    {% endif %}
+</body>
+</html>

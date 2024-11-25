@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Concesionario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de Plantillas</title>
 </head>
 <body>
-    <h1>{{ titulo }}</h1>
+    <h1>Concesionario</h1>
     <ul>
-        <li><a href="{% url 'clientes' %}">Lista de Clientes</a></li>
-        <li><a href="{% url 'fabricantes' %}">Lista de Fabricantes</a></li>
-        <li><a href="{% url 'vehiculos' %}">Lista de Vehículos</a></li>
-        <li><a href="{% url 'compras' %}">Lista de Compras</a></li>
+        <li><a href="{% url 'lista_clientes' %}">Lista de Clientes</a></li>
+        <li><a href="{% url 'lista_fabricantes' %}">Lista de Fabricantes</a></li>
+        <li><a href="{% url 'lista_vehiculos' %}">Lista de Vehículos</a></li>
+        <li><a href="{% url 'lista_compras' %}">Lista de Compras</a></li>
+        <li><a href="{% url 'lista_empleados' %}">Lista de Empleados</a></li>
+        <li><a href="{% url 'lista_concesionarios' %}">Lista de Concesionarios</a></li>
+        <li><a href="{% url 'lista_accesorios' %}">Lista de Accesorios</a></li>
     </ul>
 </body>
 </html>

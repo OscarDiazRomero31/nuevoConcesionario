@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Concesionarios</title>
+</head>
+<body>
+    <h1>Concesionarios</h1>
+    <ul>
+        {% for concesionario in concesionarios %}
+            <li>{{ concesionario.nombre }} - {{ concesionario.ubicacion }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
